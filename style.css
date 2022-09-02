@@ -1,0 +1,78 @@
+html, body {
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  passing: 0;
+}
+
+body {
+  background: silver;
+  display: flex;
+}
+
+main {
+  background: white;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-around;
+  font: normal 16px "PT Sans", arial, sans-serif;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  flex-grow: 0.6;
+  margin: auto;
+}
+
+form {
+  flex-grow: 1;
+  margin: 16px;
+  line-height: 1.5em;
+}
+
+label {
+  display: block;
+  margin: 4px;
+}
+
+input[type=text] {
+  display: block;
+  margin: 0 0 8px 0;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+input[type=text]:focus {
+  outline: none;
+  color: blue;
+}
+input[type=text]::placeholder {
+  color: #ccc;
+}
+
+#totp_url {
+  width: 100%;
+  height: 64px;
+  box-sizing: border-box;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #ccc;
+  color: black;
+  resize: none;
+}
+
+#totp_code {
+  text-align: center;
+  font: bold 32px monospace;
+}
+
+#totp_timer {
+  height: 5px;
+  border-radius: 2px;
+  width: 120px;
+  margin: 8px auto;
+  background: #ddd;
+}

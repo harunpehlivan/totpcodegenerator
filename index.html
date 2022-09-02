@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> TOTP QR Code Generator</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main>
+  <form>
+    <label for="totp_sn">Service name:</label>
+    <input type="text" autocomplete="off" spellcheck="false" placeholder="example.com" id="totp_sn"/>
+    <label for="totp_acc">Account name:</label>
+    <input type="text" autocomplete="off" spellcheck="false" placeholder="user" id="totp_acc"/>
+    <label for="totp_key">Base32 key:</label>
+    <input type="text" autocomplete="off" spellcheck="false" placeholder="AABB CCDD" id="totp_key"/>
+    <label for="totp_url">URL:</label>
+    <textarea id="totp_url" disabled="disabled"></textarea>
+  </form>
+  <aside><a id="totp_link"></a>
+    <div id="totp_code"></div>
+    <div id="totp_timer"></div>
+  </aside>
+</main>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/qrcode@1/build/qrcode.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/otpauth@8/dist/otpauth.umd.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
